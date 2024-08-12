@@ -1,10 +1,24 @@
-<div class="p-5">
+<mat-form-field class="mt-3">
+    <input matInput [matDatepicker]="picker" [(ngModel)]="date" (ngModelChange)="changeDate()">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+<div class="m-5 test">
     @for (time of times; track $index) {
     <div class="time-line d-flex">
         <div class="time d-flex align-items-end justify-content-end">{{ time.time }}</div>
         <div class="brd-bottom w-100" (click)="addAppointment($index)">
             <div class="brd-right empty"></div>
             <div class="w-100"></div>
+            <div class="d-flex">
+                @for (item of calendarService.appointments()[$index]; track item.value) {
+                {{item.from / 4 *40}}
+                <div class="appointment" cdkDragLockAxis="y" cdkDrag
+                    [ngStyle]="{ height: item.height + 'px', top: item.from / 4 *40 + 'px', left: item.left + 'px', background: item.color}">
+                    {{item.title}}</div>
+                }
+            </div>
         </div>
     </div>
     }

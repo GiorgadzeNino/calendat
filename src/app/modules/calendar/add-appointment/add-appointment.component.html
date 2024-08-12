@@ -1,0 +1,34 @@
+<div class="ml-auto">
+  <button mat-button class="close-button" color="accent" [mat-dialog-close]="true">
+    X
+  </button>
+</div>
+
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="formGroup">
+    <mat-form-field>
+      <input matInput formControlName="title" placeholder="Add title">
+    </mat-form-field>
+
+    <mat-chip disabled class="mt-3">Appointment</mat-chip>
+    <input type="color" formControlName="color" ><br><br>
+
+    <div class="d-flex align-items-center">
+      <mat-form-field class="mt-3">
+        <input matInput [matDatepicker]="picker" formControlName="appointmentDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <app-time-select formControlName="from"></app-time-select>
+      <app-time-select formControlName="to"></app-time-select>
+
+    </div>
+    <mat-form-field>
+      <input matInput formControlName="description" placeholder="Add Description">
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions >
+  <button mat-raised-button color="primary" (click)="save()">Save</button>
+</mat-dialog-actions>

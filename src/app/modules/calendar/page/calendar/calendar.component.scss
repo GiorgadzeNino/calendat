@@ -6,6 +6,7 @@
 }
 .brd-bottom {
   border-bottom: 1px solid #f4f4f4;
+  // position: relative;
 }
 
 .empty {
@@ -14,4 +15,14 @@
 }
 .time {
   width: 45px;
+}
+
+.test{
+  position: relative;
+}
+.appointment {
+  background-color: yellow;
+  position: absolute;
+  top: 0;
+  width: 120px;
 }

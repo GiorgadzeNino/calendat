@@ -1,0 +1,7 @@
+<mat-form-field>
+    <mat-select [(ngModel)]="value" (ngModelChange)="change($event)">
+        @for (time of timeList; track $index) {
+        <mat-option [value]="time.value">{{time.time}}</mat-option>
+        }
+    </mat-select>
+</mat-form-field>
