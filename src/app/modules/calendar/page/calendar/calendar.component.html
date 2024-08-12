@@ -13,7 +13,7 @@
             <div class="w-100"></div>
             <div class="d-flex">
                 @for (item of calendarService.appointments()[$index]; track item.value) {
-                {{item.from / 4 *40}}
+
                 <div class="appointment" cdkDragLockAxis="y" cdkDrag
                     [ngStyle]="{ height: item.height + 'px', top: item.from / 4 *40 + 'px', left: item.left + 'px', background: item.color}">
                     {{item.title}}</div>
