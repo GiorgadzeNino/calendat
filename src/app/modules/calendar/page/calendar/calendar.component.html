@@ -1,0 +1,11 @@
+<div class="p-5">
+    @for (time of times; track $index) {
+    <div class="time-line d-flex">
+        <div class="time d-flex align-items-end justify-content-end">{{ time.time }}</div>
+        <div class="brd-bottom w-100" (click)="addAppointment($index)">
+            <div class="brd-right empty"></div>
+            <div class="w-100"></div>
+        </div>
+    </div>
+    }
+</div>

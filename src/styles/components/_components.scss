@@ -1,0 +1,378 @@
+// width height
+.w-100 {
+  width: 100%;
+}
+
+.w-min-auto {
+  min-width: auto !important;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+// divider
+.mat-divider {
+  position: relative !important;
+}
+
+// links
+a {
+  text-decoration: none;
+  // color: $accent-color;
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+}
+
+// error text
+.s-error-text {
+  font-size: 12px;
+}
+
+.warn-color {
+  color: $warn-color;
+  cursor: pointer;
+}
+
+// light scroll
+.light-scroll::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.light-scroll::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.light-scroll::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.mat-drawer {
+  background-color: transparent !important;
+}
+// content-scroll
+.content-scroll,
+.mat-drawer-inner-container {
+  width: 100vw !important;
+  &.scroll-y {
+    overflow-y: auto !important;
+  }
+  &.scroll-x {
+    overflow-x: auto !important;
+  }
+  &::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: lighten($calendar-green, 10%);
+  }
+}
+
+// word break
+.word-break-all {
+  word-break: break-all !important;
+}
+
+// go back
+.go-back-button {
+  color: #67768c;
+  display: inline-block;
+  width: 14px;
+}
+
+// refresh-btn
+.refresh-btn {
+  min-width: 45px !important;
+  line-height: 8px !important;
+}
+
+// tabs
+.mat-tab-link,
+.mat-tab-label {
+  opacity: 0.7 !important;
+}
+
+// button spinner
+.spinner-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background: rgba(#f4f4f4, 0.7);
+}
+
+.button-container {
+  display: block;
+  position: relative;
+}
+
+.mat-menu-spinner-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+// close icon
+.close-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    color: $warn-color;
+  }
+}
+
+// dialog
+.mat-dialog-content {
+  font-size: 0.97rem;
+  line-height: 1.3;
+}
+
+// mat menu
+.mat-menu-content {
+  position: relative;
+}
+
+.mat-menu-content {
+  height: 100%;
+}
+.mat-menu-item.active {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.max-width-none,
+.mat-menu-panel {
+  max-width: none !important;
+}
+
+// line pre
+.line-pre {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+// table status indicator
+.table-status-indicator {
+  font-size: 1.1rem;
+  &.fa-check {
+    color: $calendar-green;
+  }
+  &.fa-times {
+    color: $calendar-red;
+  }
+}
+.fa-times {
+  color: $calendar-red;
+}
+
+// side nav end
+.sne-top-panel {
+  font-size: 17px;
+  color: #273348;
+  i {
+    cursor: pointer;
+    &:hover {
+      color: $warn-color;
+    }
+  }
+}
+
+// chips
+.filter-chip {
+  i {
+    color: lighten($calendar-red, 15%);
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+}
+
+.filters-count {
+  background-color: #4294ff;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  border-radius: 50%;
+  margin-left: 0.25rem;
+}
+
+.dialog-backdrop {
+  background: rgba(103, 118, 140, 0.5) !important;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+}
+.overflow-x-y {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.mat-bottom-sheet-container {
+  padding: 0 !important;
+}
+
+.is-checked-container {
+  width: 60px;
+  background-color: $calendar-red-lighten;
+  border-radius: 7px;
+}
+
+.is-checked {
+  background-color: #aaffbe;
+}
+
+.mat-bottom-sheet-container-xlarge,
+.mat-bottom-sheet-container-large,
+.mat-bottom-sheet-container {
+  width: 100%;
+}
+
+// .no-data {
+//   border-top: 1px solid rgba(0, 0, 0, 0.12);
+// }
+
+.add-container {
+  // width: 500px;
+  background-color: #fff;
+
+  .cancel {
+    background-color: $calendar-red-lighten;
+    color: #fff;
+  }
+
+  .submit {
+    background-color: $calendar-green;
+    color: #fff;
+  }
+
+  .form-control {
+    &:focus {
+      border: 1px solid !important;
+
+      option {
+        height: 30px;
+      }
+    }
+  }
+
+  textarea {
+    max-height: max-content;
+  }
+}
+
+// radio-button-ების სტილები
+.blocked-radio-buttons {
+  .mat-radio-button .mat-radio-ripple .mat-ripple-element {
+    opacity: 0 !important; /*click effect color change*/
+    background-color: #fff !important;
+  }
+
+  .mat-radio-button .mat-radio-inner-circle {
+    background-color: #fff !important; /*inner circle color change*/
+  }
+
+  .mat-radio-button .mat-radio-outer-circle {
+    border-color: #fff !important; /*outer ring color change*/
+  }
+}
+
+//  სტილი არის  textarea-სთვის
+.textarea-container,
+.blocked-radio-buttons {
+  .mat-form-field-underline {
+    display: none;
+  }
+  .mat-form-field-wrapper {
+    padding-bottom: 0;
+  }
+  .mat-form-field-label-wrapper {
+    top: -1.3rem;
+  }
+  mat-label {
+    font-size: 14px;
+  }
+}
+
+// invalid and touched radio button
+.mat-radio-group.ng-invalid.ng-touched {
+  .mat-radio-button:first-of-type {
+    .mat-radio-outer-circle {
+      border-color: #e85548 !important;
+    }
+  }
+}
+
+.invalid-checkbox,
+.invalid-radio {
+  .mat-radio-button:first-of-type {
+    .mat-radio-outer-circle {
+      border-color: #e85548 !important;
+    }
+  }
+}
+
+.invalid-checkbox:first-of-type {
+  .mat-checkbox-frame {
+    border-color: #e85548 !important;
+  }
+}
+
+textarea {
+  min-height: 65px;
+}
+
+.textarea-field {
+  border: 1px solid #707070;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.disabled-textarea {
+  opacity: 0.5;
+}
+
+.textarea-field.ng-touched.ng-invalid {
+  border-color: #e85548 !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.back-button {
+  display: flex !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  min-width: 23px !important;
+  align-items: center !important;
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+  background: #fff;
+  transform: rotate(90deg);
+  margin-left: 15px !important;
+}

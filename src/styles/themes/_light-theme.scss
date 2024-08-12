@@ -1,0 +1,49 @@
+@use "@angular/material" as mat;
+
+// Set Colors
+$light-theme: mat.define-light-theme((
+  color: (
+    primary: $theme-primary,
+    accent: $theme-accent,
+    warn: $theme-warn
+  )
+));
+@include mat.core();
+
+@include mat.all-component-themes($light-theme);
+
+// set fonts
+$custom-typography-caps: mat.define-legacy-typography-config(
+  $font-family: "BPG DejaVu Sans",
+);
+
+@include mat.typography-hierarchy($custom-typography-caps);
+@include mat.checkbox-typography($custom-typography-caps);
+@include mat.all-component-typographies($custom-typography-caps);
+
+// backdrop & draver
+.mat-drawer,
+.mat-drawer-backdrop.mat-drawer-shown {
+  position: fixed !important;
+}
+.mat-drawer-backdrop.mat-drawer-shown {
+  background-color: rgba(32, 38, 51, 0.9) !important;
+}
+
+.cdk-overlay-dark-backdrop {
+  background: rgba(103, 118, 140, 0) !important;
+}
+
+.mat-drawer-container {
+  background: #fdfdfd;
+}
+
+.mat-sidenav-container {
+  overflow: visible !important;
+}
+
+// tab body content
+.mat-tab-body-content {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
